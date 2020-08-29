@@ -15,6 +15,11 @@ const routes: Routes = [
         path: 'short',
         loadChildren: () => import('./shorter-link/shorter-link.module').then(m => m.ShorterLinkModule)
 
+      },
+      {
+        path: '',
+        redirectTo: 'search',
+        pathMatch: 'full'
       }
     ]
   }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchUserComponent } from './search-user/search-user.component';
 import { SearchUserRoutingModule } from './search-user-routing.module';
+import { MaterialModule } from 'src/app/material/material.module';
 
 
 
@@ -9,6 +10,7 @@ import { SearchUserRoutingModule } from './search-user-routing.module';
   declarations: [SearchUserComponent],
   imports: [
     CommonModule,
+    MaterialModule,
     SearchUserRoutingModule
   ]
 })

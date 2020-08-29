@@ -1,1 +1,6 @@
-<p>shorter-link works!</p>
+<input class="input-search" matInput placeholder="Typing link and click on enter" (keyup.enter)="onKey($event)">
+<span *ngIf="shortLink">
+    {{shortLink}}
+</span>
+
+<button mat-button (click)="copyShortLink()" *ngIf="shortLink">  Copy</button>

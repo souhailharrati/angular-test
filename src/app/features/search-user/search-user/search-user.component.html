@@ -1,1 +1,18 @@
-<p>search-user works!</p>
+<input class="input-search" matInput placeholder="Typing UserName and click on enter" (keyup.enter)="onKey($event)">
+<mat-card class="example-card" *ngIf="user && user.name">
+    <mat-card-header>
+        <img mat-card-avatar [src]="user.avatar_url">
+      <mat-card-title>{{user.name || ''}}</mat-card-title>
+      <mat-card-subtitle>{{user.public_repos || ''}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <span>{{user.location || ''}}</span>
+      <p>
+        {{user.bio || ''}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="navigateToShorterLink()">  To ShorterLink</button>
+    </mat-card-actions>
+  </mat-card>
+  
